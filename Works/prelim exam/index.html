@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Management System</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background: #f0f2f5; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .form-section { display: flex; gap: 10px; margin-bottom: 20px; padding: 15px; background: #fafafa; border: 1px solid #ddd; border-radius: 4px; }
+        input { padding: 8px; border: 1px solid #ccc; border-radius: 4px; flex: 1; }
+        button { padding: 8px 15px; cursor: pointer; background: #007bff; color: white; border: none; border-radius: 4px; }
+        button.delete-btn { background: #dc3545; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { padding: 10px; border: 1px solid #eee; text-align: left; }
+        th { background: #f8f9fa; position: sticky; top: 0; }
+        .scroll-container { max-height: 500px; overflow-y: auto; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Database Kane Capili (MOCK_DATA)</h2>
+    
+    <div class="form-section">
+        <input type="text" id="stuId" placeholder="Student ID">
+        <input type="text" id="stuName" placeholder="Full Name">
+        <input type="text" id="stuGrade" placeholder="Grade (Prelim Exam)">
+        <button onclick="addStudent()">Add Student</button>
+    </div>
+
+    <div class="scroll-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Grade</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+</div>
+
+<script src="prelimscript.js"></script>
+</body>
+</html>
